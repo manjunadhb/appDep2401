@@ -23,7 +23,7 @@ function Home() {
     };
 
     let JSONData = await fetch(
-      "http://localhost:4567/deleteProfile",
+      "/deleteProfile",
       reqOptions
     );
 
@@ -47,7 +47,7 @@ function Home() {
         {storeObj.loginReducer.loginDetails.lastName}
       </h2>
       <img
-        src={`http://localhost:4567/${storeObj.loginReducer.loginDetails.profilePic}`}
+        src={`/${storeObj.loginReducer.loginDetails.profilePic}`}
       ></img>
       <div>
         <button

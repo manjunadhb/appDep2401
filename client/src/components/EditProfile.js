@@ -28,7 +28,7 @@ function EditProfile() {
     mobileNoInputRef.current.value =
       storeObj.loginReducer.loginDetails.mobileNo;
     setProfilePic(
-      `http://localhost:4567/${storeObj.loginReducer.loginDetails.profilePic}`
+      `/${storeObj.loginReducer.loginDetails.profilePic}`
     );
   }, []);
 
@@ -50,7 +50,7 @@ function EditProfile() {
     };
 
     let JSONData = await fetch(
-      "http://localhost:4567/updateProfile",
+      "/updateProfile",
       reqOptions
     );
 
